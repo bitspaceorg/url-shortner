@@ -1,7 +1,7 @@
 export const data = [
 	{
 		short : "123",
-		long : "www.youtube.com",
+		long : "https://youtube.com",
 	},
 	{
 		short : "124",
