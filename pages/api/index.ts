@@ -1,15 +1,13 @@
 import { prisma } from "@/libs/prisma";
+import { random_variable_generate } from "@/libs/random_var";
+
 const handler = async (req,res) => {
     if(req.method==='POST'){
-        console.log(req.body.toShort);
-        const ra = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
-        let gen = ""
-        for(let i = 0 ; i<5;i++)gen+=ra[Math.floor(Math.random() * ra.length)];
         
     const data = await prisma.urls.create({
         data : {
-            short : req.body.toShort,
-            long : gen
+            short : random_variable_generate(5),
+            long : req.body.toShort
         }
     });
     res.json(data)
