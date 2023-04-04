@@ -26,7 +26,7 @@ export default function Home() {
         })
         tocopy = false;
         setInput("");
-       setCopy(response.data.short);
+        setCopy(response.data.short);
     }
 	return (
     <>
