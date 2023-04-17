@@ -48,7 +48,7 @@ export default function Home() {
                     </div>
                 }
                 {
-                error ? <div><i className="font-black material-icons">Link_Off</i>Broken URL</div> : null 
+                error ? <div><i className="text-4xl font-black align-middle material-icons">link_off</i><span> </span>Broken URL</div> : null 
                 }
                 </div>
             </div>
