@@ -32,7 +32,7 @@ const handler = async (req,res) => {
                 }    
                     })
                     .catch ( e => {
-                        res.status(401)
+                        res.send({status:404})
                     })
                 }
 }

@@ -7,17 +7,26 @@ export default function Home() {
     const [input, setInput] = useState("");
     const [copy, setCopy] = useState("");
     const [isLoading, setLoading] = useState<boolean>(false);
+    const [error , setError] = useState<boolean>(false);
 
     const generateShort = async (e: any) => {
+        setError(false)
         e.preventDefault();
         setCopy("");
         setLoading(true);
         const response = await axios.post('/api', {
             toShort : input 
         })
-        setLoading(false);
+        if(response.data.status === 404){
+            setError(true);
+            setCopy("");
+            setLoading(false);
+        }else{
+            setError(false);
+            setLoading(false);
+            setCopy(response.data.short);
+        }
         setInput("");
-        setCopy(response.data.short);
     }
 
 	return (
@@ -37,6 +46,9 @@ export default function Home() {
                     <div>
                         <h1 onClick={() => navigator.clipboard.writeText(`${HOST}/${copy}`)} className="text-3xl font-black cursor-pointer">{copy} <i className="font-black material-icons">&#xe3e0;</i></h1>
                     </div>
+                }
+                {
+                error ? <div><i className="font-black material-icons">Link_Off</i>Broken URL</div> : null 
                 }
                 </div>
             </div>
