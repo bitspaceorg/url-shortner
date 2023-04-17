@@ -9,7 +9,6 @@ export default function Home() {
     const [isLoading, setLoading] = useState<boolean>(false);
 
     const generateShort = async (e: any) => {
-
         e.preventDefault();
         setCopy("");
         setLoading(true);
@@ -19,7 +18,6 @@ export default function Home() {
         setLoading(false);
         setInput("");
         setCopy(response.data.short);
-
     }
 
 	return (
