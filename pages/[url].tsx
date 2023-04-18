@@ -9,11 +9,7 @@ export default function Redirect (p:InferGetServerSidePropsType<typeof getServer
 		  window.location.replace("https://"+p.data.long);
 	}, []);
 	return (
-<<<<<<< HEAD
-		<>Redirecting to {p.data.long}</>	
-=======
 		<>Redirecting to {p.data.long}</>
->>>>>>> origin/master
 	)
 }
 
@@ -24,15 +20,7 @@ export const getServerSideProps : GetServerSideProps = async({res, req, resolved
 			short :url ,
 		}
 	})
-	console.log(data)
 	return {
-<<<<<<< HEAD
-	  props: {data}, 
-	}
-  }
-
-=======
 	  props: {data}, 
 	}
   }
->>>>>>> origin/master
