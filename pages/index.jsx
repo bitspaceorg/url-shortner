@@ -5,10 +5,10 @@ import { HOST } from "@/libs/constant";
 export default function Home() {
   const [input, setInput] = useState("");
   const [copy, setCopy] = useState("");
-  const [isLoading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<boolean>(false);
+  const [isLoading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
-  const generateShort = async (e: any) => {
+  const generateShort = async (e) => {
     setError(false);
     e.preventDefault();
     setCopy("");

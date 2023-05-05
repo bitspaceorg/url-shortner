@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 import { prisma } from "../libs/prisma";
-import { useRouter } from "next/router";
 
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+export default function Redirect( p ) {
 
-export default function Redirect( p: InferGetServerSidePropsType<typeof getServerSideProps> ) {
-
-  const [isValid, setValid] = useState<boolean>(false);
+  const [isValid, setValid] = useState(false);
 
   useEffect(() => {
     if (!(p.data == null)) {
@@ -30,7 +27,7 @@ export default function Redirect( p: InferGetServerSidePropsType<typeof getServe
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ res, req, resolvedUrl }) => {
+export const getServerSideProps = async ({ res, req, resolvedUrl }) => {
   const url = resolvedUrl.slice(1);
   const data = await prisma.urls.findUnique({
     where: {
