@@ -1,4 +1,4 @@
-export const random_variable_generate =(n)=>{
+export const random_variable_generate =(n: number)=>{
         const alpha_data = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
         let generated_url = ""
         for(let i = 0 ; i<n;i++){

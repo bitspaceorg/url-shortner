@@ -15,7 +15,7 @@ export default function Redirect( p: InferGetServerSidePropsType<typeof getServe
     } else {
       setValid(false);
     }
-  }, []);
+  },[p.data]);
 
   return (
     <div className="w-screen h-screen">
