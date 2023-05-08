@@ -12,4 +12,3 @@ model urls {
   short String @unique
   long  String @unique
 }
-

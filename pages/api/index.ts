@@ -1,19 +1,17 @@
 import { prisma } from "@/libs/prisma";
 import { random_variable_generate } from "@/libs/random_var";
-import axios from "axios";
+import axios from "axios"
 
-const handler = async (req, res) => {
+const handler = async (req:any, res:any) => {
 
   if (req.method === "POST") {
     let input = req.body.toShort;
     if (input.slice(0, 7) == "http://") input = input.slice(7);
     if (input.slice(0, 8) == "https://") input = input.slice(8);
 
-    await axios
-      .get("https://" + input)
-      .then(async (response) => {
-
-        if (response.status == 200) {
+    await fetch ("https://" + input)
+      .then(async (response: any) => {
+        if (response.ok || response.status == 999) {
           const v = await prisma.urls.findUnique({
             where: {
               long: input,
@@ -33,8 +31,9 @@ const handler = async (req, res) => {
             });
           }
         }
+        else res.send({ status: 404 })
       })
-      .catch((e) => {
+      .catch((e: any) => {
         res.send({ status: 404 });
       });
 

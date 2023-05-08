@@ -1,4 +1,3 @@
-
 <div align='center'>
 <a href='https://github.com/bitspaceorg/' target='_blank'>
 <img src='https://media.discordapp.net/attachments/1097724557143593010/1104273511658307624/Url.png?width=418&height=418' width='200'/></a>
@@ -51,8 +50,3 @@ Welcome to our URL Shortener! This open-source tool allows you to shorten long w
 We highly appreciate contributions from the open-source community, as they play a crucial role in improving and advancing the project. Whether you're a developer, designer, tester, or documentation enthusiast, your contributions are valuable to us. Join us in making a difference!
 # Contributors
 <img src='https://contrib.rocks/image?repo=bitspaceorg/url-shortner'/>
-
-
-
-
-
