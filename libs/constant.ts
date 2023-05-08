@@ -1,2 +1,2 @@
 export const PRODUCTION: boolean = true;
-export const HOST: string = PRODUCTION ? "url-shortner-two-mu.vercel.app" : "localhost:3000";
+export const HOST: string = PRODUCTION ? "urlshortener.bitspace.org.in" : "localhost:3000";

@@ -11,6 +11,9 @@ export default function Redirect( p ) {
       window.location.replace("https://" + p.data.long);
     } else {
       setValid(false);
+        setTimeout(()=>{
+            window.location.replace("https://urlshortener.bitspace.org.in");
+        },2000)
     }
   },[p.data]);
 
