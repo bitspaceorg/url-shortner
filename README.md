@@ -33,6 +33,8 @@ Welcome to our URL Shortener! This open-source tool allows you to shorten long w
 
 ### Checkout our [URL SHORTENER](https://urlshortener.bitspace.org.in/) and feel free to share your views
 
+# How To Use
+
 ### You can also run our code in your device by following the steps given below
 
 1. Clone the repository : `git clone https://github.com/bitspaceorg/url-shortner`
