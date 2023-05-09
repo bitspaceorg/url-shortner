@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <title>URL-SHORTENER</title>
         <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           className="mt-5"
