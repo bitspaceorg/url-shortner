@@ -44,7 +44,7 @@ Welcome to our URL Shortener! This open-source tool allows you to shorten long w
     - Create a Supabase project and obtain the connection string.
     - Create the `.env` file with your Supabase connection string.
     - Run `npx prisma migrate dev --name init ` followed by `npx prisma generate` to connect the database with your project
-4. After all the above steps are done sucessfully, run `npm run dev`<br/>
+4. After all the above steps are done successfully, run `npm run dev`<br/>
 #### Now go to the respective port of localhost to experience our URL shortener running in your device
 
 ## Contributing
