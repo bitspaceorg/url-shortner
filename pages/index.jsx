@@ -44,44 +44,43 @@ export default function Home() {
   };
 
   return (
-    <div className="w-screen h-screen bg-white">
-      <div className="flex flex-col items-center justify-center w-full h-full">
-        <form onSubmit={(e) => generateShort(e)}>
+      <div className="flex flex-col justify-center items-center w-screen h-screen bg-white">
+        <form onSubmit={(e) => generateShort(e)} className="flex flex-col justify-center items-center" >
           {col ? (
             <>
               <input
                 placeholder="Enter your url *here*"
-                className="w-[300px] h-[50px] border-4 border-black px-2 outline-none"
+                className="w-[250px] h-[50px] border-4 border-black px-2 outline-none text-xl"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
               />
               <button
                 type="submit"
-                className="bg-black h-[50px] text-white px-2 font-[600]"
+                className="bg-black h-[50px] text-white px-2 font-[600] mt-4 text-xl"
               >
                 Shorten
               </button>
             </>
           ) : (
-            <>
+           <div className="flex flex-col justify-center items-center">
               <input
                 placeholder="Enter your url *here*"
-                className="w-[300px] h-[50px] border-4 border-red-500 px-2 outline-none"
+                className="w-[300px] h-[50px] border-4 border-red-500 px-2 outline-none text-xl"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
               />
               <button
                 type="submit"
-                className="bg-red-500 h-[50px] text-white px-2 font-[600]"
+                className="bg-red-500 h-[50px] text-white px-2 font-[600] mt-4 text-xl"
               >
                 Shorten
               </button>
               <br />
-              <div className="text-red-500">
+              <div className="text-red-500 mt-2">
                 <i className="mr-2 text-red-500 align-middle material-symbols-outlined">error</i>
               Invalid URL
               </div>
-            </>
+              </div>
           )}
         </form>
         <div className="text-2xl font-[600] m-4">
@@ -90,14 +89,13 @@ export default function Home() {
             <div>
               <h1
                 onClick={() => navigator.clipboard.writeText(`${HOST}/${copy}`)}
-                className="text-3xl font-black cursor-pointer"
+                className="text-3xl font-black cursor-pointer text-center mt-4"
               >
                 {copy} <i className="font-black material-icons">&#xe3e0;</i>
               </h1>
             </div>
           )}
         </div>
-      </div>
-    </div>
+        </div>
   );
 }
