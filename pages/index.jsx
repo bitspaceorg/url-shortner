@@ -47,41 +47,53 @@ export default function Home() {
       <div className="flex flex-col justify-center items-center w-screen h-screen bg-white">
         <form onSubmit={(e) => generateShort(e)} className="flex flex-col justify-center items-center" >
           {col ? (
-            <>
+            <div className="flex flex-row flex-wrap justify-center items-center">
               <input
                 placeholder="Enter your url *here*"
-                className="w-[250px] h-[50px] border-4 border-black px-2 outline-none text-xl"
+                className="w-[270px]  h-[50px] border-4 border-black px-2 outline-none text-xl"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
               />
               <button
                 type="submit"
-                className="bg-black h-[50px] text-white px-2 font-[600] mt-4 text-xl"
+                className="bg-black h-[50px] text-white px-2 font-[600]  text-xl"
               >
                 Shorten
               </button>
-            </>
+            </div>
           ) : (
-           <div className="flex flex-col justify-center items-center">
+           <div className="flex flex-col  justify-center items-center">
+            <div className="flex flex-row flex-wrap justify-center items-center">
               <input
                 placeholder="Enter your url *here*"
-                className="w-[300px] h-[50px] border-4 border-red-500 px-2 outline-none text-xl"
+                className="w-[270px]  h-[50px] border-4 border-red-500 px-2 outline-none text-xl"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
               />
               <button
                 type="submit"
-                className="bg-red-500 h-[50px] text-white px-2 font-[600] mt-4 text-xl"
+                className="bg-red-500 h-[50px]   text-white px-2 font-[600]  text-xl "
               >
                 Shorten
               </button>
+            </div>
               <br />
               <div className="text-red-500 mt-2">
                 <i className="mr-2 text-red-500 align-middle material-symbols-outlined">error</i>
               Invalid URL
               </div>
-              </div>
+            </div>
           )}
+            <style jsx>
+              {`
+ 
+              @media screen and (max-width: 358px) {
+                button {
+                  width: 270px;
+                }
+              }
+            `}
+            </style>
         </form>
         <div className="text-2xl font-[600] m-4">
           {isLoading ? <h1>Loading...</h1> : null}
@@ -97,5 +109,8 @@ export default function Home() {
           )}
         </div>
         </div>
+    
   );
+  
 }
+
