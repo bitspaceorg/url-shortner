@@ -56,7 +56,9 @@ export default function Home() {
         <div className="flex flex-row flex-wrap justify-center items-center">
           <input
             placeholder="Enter your url *here*"
-            className={`w-[270px]  h-[50px] border-4 border-${color} px-2 outline-none text-xl`}
+            className={"w-[270px]  h-[50px] border-4 px-2 outline-none text-xl ".concat(
+              "border-" + color
+            )}
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
