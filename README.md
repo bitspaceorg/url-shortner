@@ -5,7 +5,7 @@
 <a href='https://react.dev/' target='_blank'><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/></a>
 <a href='https://www.typescriptlang.org/' target='_blank'><img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/></a>
 <a href='https://nextjs.org/' target='_blank'><img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/></a>
-<a href='https://https://www.prisma.io/' target='_blank'><img src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white"/></a>
+<a href='https://www.prisma.io/' target='_blank'><img src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white"/></a>
 <a href='https://supabase.com/docs' target='_blank'><img src="https://img.shields.io/badge/Supabase-181818?style=for-the-badge&logo=supabase&logoColor=white"/></a>
 <a href='https://vercel.com/docs' target='_blank'><img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a><br/>
 <img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black"/>
@@ -19,7 +19,7 @@ Welcome to our URL Shortener! This open-source tool allows you to shorten long w
 
 - Generate short and memorable URLs for any web address.
 - Lightning fast broken link checker
-- Minimal UI and database setup that makes this process even more faster
+- Minimal UI and database setup that make this process even faster
 
 ## Technologies Used
 
@@ -43,8 +43,8 @@ Welcome to our URL Shortener! This open-source tool allows you to shorten long w
 3. Set up the database:
     - Create a Supabase project and obtain the connection string.
     - Create the `.env` file with your Supabase connection string.
-    - Run `npx prisma migrate dev --name init ` followed by `npx prisma generate` to connect your database with your project
-4. If all the above steps are done sucessfully, now run `npm run dev`<br/>
+    - Run `npx prisma migrate dev --name init ` followed by `npx prisma generate` to connect the database with your project
+4. After all the above steps are done successfully, run `npm run dev`<br/>
 #### Now go to the respective port of localhost to experience our URL shortener running in your device
 
 ## Contributing
