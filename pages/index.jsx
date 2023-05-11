@@ -72,7 +72,7 @@ export default function Home() {
               />
               <button
                 type="submit"
-                className="bg-red-500 h-[50px]   text-white px-2 font-[600]  text-xl "
+                className="bg-red-500 h-[50px] text-white px-2 font-[600] text-xl "
               >
                 Shorten
               </button>
@@ -83,6 +83,7 @@ export default function Home() {
               Invalid URL
               </div>
             </div>
+
           )}
             <style jsx>
               {`
@@ -108,9 +109,7 @@ export default function Home() {
             </div>
           )}
         </div>
-        </div>
-    
-  );
-  
+       </div>
+  ); 
 }
 
