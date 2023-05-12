@@ -56,15 +56,21 @@ export default function Home() {
         <div className="flex flex-row flex-wrap justify-center items-center">
           <input
             placeholder="Enter your url *here*"
-            className={"w-[270px]  h-[50px] border-4 px-2 outline-none text-xl ".concat(
-              "border-" + color
-            )}
+            className={
+              error === ""
+                ? "w-[270px]  h-[50px] border-4 px-2 outline-none text-xl border-black"
+                : "w-[270px]  h-[50px] border-4 px-2 outline-none text-xl border-red-500"
+            }
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
           <button
             type="submit"
-            className={`bg-${color} h-[50px] text-white px-2 font-[600] text-xl`}
+            className={
+              error === ""
+                ? "bg-black h-[50px] text-white px-2 font-[600] text-xl"
+                : "bg-red-500 h-[50px] text-white px-2 font-[600] text-xl"
+            }
           >
             Shorten
           </button>

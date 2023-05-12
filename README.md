@@ -29,6 +29,7 @@ Welcome to our URL Shortener! This open-source tool allows you to shorten long w
 - ORM: Prisma
 
 ## Demo / Screen Shots
+
 <img src='https://media.discordapp.net/attachments/1058000101919948901/1104498044243816600/url-shortener-finalss.png?width=723&height=591'/>
 
 ### Checkout our [URL SHORTENER](https://urlshortener.bitspace.org.in/) and feel free to share your views
@@ -39,15 +40,23 @@ Welcome to our URL Shortener! This open-source tool allows you to shorten long w
 
 1. Clone the repository : `git clone https://github.com/bitspaceorg/url-shortner`
 2. Install all dependencies:
-    - `npm i` : This will install the required packages
+   - `npm i` : This will install the required packages
 3. Set up the database:
-    - Create a Supabase project and obtain the connection string.
-    - Create the `.env` file with your Supabase connection string.
-    - Run `npx prisma migrate dev --name init ` followed by `npx prisma generate` to connect the database with your project
+   - Create a Supabase project and obtain the connection string.
+   - Create the `.env` file with your Supabase connection string stored in `DATABASE_URL` variable <br />
+     For Example ,
+     `sh
+     DATABASE_URL = "postgresql://postgres:[YOUR PASSWORD]@db.[YOUR DATABASE ID].supabase.co:5432/postgres"
+     `
+   - Run `npx prisma migrate dev --name init ` followed by `npx prisma generate` to connect the database with your project
 4. After all the above steps are done successfully, run `npm run dev`<br/>
+
 #### Now go to the respective port of localhost to experience our URL shortener running in your device
 
 ## Contributing
+
 We highly appreciate contributions from the open-source community, as they play a crucial role in improving and advancing the project. Whether you're a developer, designer, tester, or documentation enthusiast, your contributions are valuable to us. Join us in making a difference!
+
 # Contributors
+
 <img src='https://contrib.rocks/image?repo=bitspaceorg/url-shortner'/>
