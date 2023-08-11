@@ -51,9 +51,9 @@ export default function Home() {
 
   let color = error === "" ? "black" : "red-500";
   return (
-    <div className="flex flex-col justify-center items-center w-screen h-screen bg-white">
+    <div className="flex flex-col items-center justify-center w-screen h-screen bg-white">
       <form onSubmit={(e) => generateShort(e)}>
-        <div className="flex flex-row flex-wrap justify-center items-center">
+        <div className="flex flex-row flex-wrap items-center justify-center">
           <input
             placeholder="Enter your url *here*"
             className={
@@ -72,7 +72,7 @@ export default function Home() {
                 : "bg-black h-[50px] text-white px-2 font-[600] text-xl"
             }
           >
-            shorten
+        shorten
           </button>
         </div>
       </form>
@@ -102,7 +102,7 @@ export default function Home() {
         {copy.length === 0 || !(error === "") ? null : (
           <h1
             onClick={() => navigator.clipboard.writeText(`${HOST}/${copy}`)}
-            className="text-3xl font-black cursor-pointer text-center"
+            className="text-3xl font-black text-center cursor-pointer"
           >
             {copy} <i className="font-black material-icons">&#xe3e0;</i>
           </h1>
