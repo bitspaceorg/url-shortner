@@ -72,7 +72,7 @@ export default function Home() {
                 : "bg-black h-[50px] text-white px-2 font-[600] text-xl"
             }
           >
-            shrotn
+            shoten
           </button>
         </div>
       </form>
