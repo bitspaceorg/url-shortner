@@ -59,7 +59,7 @@ export default function Home() {
             className={
               error === ""
                 ? "w-[270px]  h-[50px] border-4 px-2 outline-none text-xl border-black"
-                : "w-[270px]  h-[50px] border-4 px-2 outline-none text-xl border-black"
+                : "w-[270px]  h-[50px] border-4 px-2 outline-none text-xl border-red-500"
             }
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -69,10 +69,10 @@ export default function Home() {
             className={
               error === ""
                 ? "bg-black h-[50px] text-white px-2 font-[600] text-xl"
-                : "bg-black h-[50px] text-white px-2 font-[600] text-xl"
+                : "bg-red-500 h-[50px] text-white px-2 font-[600] text-xl"
             }
           >
-            shorten 
+            shorten
           </button>
         </div>
       </form>
@@ -93,7 +93,8 @@ export default function Home() {
         )}
 
         {error !== "" && (
-          <h1 className="mr-2 text-black ">
+          <h1 className="mr-2 text-red-500 ">
+            {" "}
             <i className="align-middle material-symbols-outlined">error</i>{" "}
             {error}
           </h1>
